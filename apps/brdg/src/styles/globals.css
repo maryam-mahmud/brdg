@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .gradient-button {
+        @apply text-dark;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 32px;
+        gap: 8px;
+        width: 6.9375rem; /*111px*/
+        height: 2.375rem; /*38px*/
+        background: linear-gradient(135deg, #FFF6F5 0%, #FDDEDB 23.96%, #FEB3E3 50.56%, #F9B1F5 70.16%, #76EDFD 100%);
+        border-radius: 30px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22.4px;
+    }
+
+    .text-gradient {
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%; /* or 22px */
+        background: linear-gradient(135deg, #FFF6F5 0%, #FDDEDB 23.96%, #FEB3E3 50.56%, #F9B1F5 70.16%, #76EDFD 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+    }
+  }

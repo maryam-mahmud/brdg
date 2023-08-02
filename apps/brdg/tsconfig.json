@@ -1,0 +1,53 @@
+{
+  "extends": "tsconfig/nextjs.json",
+  "compilerOptions": {
+    "plugins": [{ "name": "next" }]
+  },
+  "paths": {
+    "@config/*":["./src/config/*.ts"],
+    "@store-/*":["./src/store/*.ts"],
+    "@Logo":["./src/shared/components/atoms/Logo.tsx"],
+    "@icons":["./src/shared/components/atoms/Icons/index.tsx"],
+    "@imgs":["./src/shared/components/atoms/imgs/index.tsx"],
+    "@style_constants/*":["./src/global/constants/*.ts"],
+    "@style":["./src/global/styles/index.ts"],
+    "@assets/*":["./assets/*"],
+    "@root-types/*":["./types/*.ts"],
+    "@hooks/*":["./src/hooks/*.ts","./src/hooks/*.tsx"],
+    "@shared/*": [
+    "./src/shared/*",
+    "./src/shared/components/atoms/*.tsx",
+     "./src/shared/components/molecules/*.tsx",
+     "./src/shared/components/layout/*.tsx"
+    ],
+    "@auth-route/*":[
+      "./src/routes/auth/*",
+     "./src/routes/auth/components/atoms*.tsx",
+     "./src/routes/auth/screens/*.tsx",
+     "./src/routes/auth/services/*.ts",
+     "./src/routes/auth/components/layout/*.tsx"
+    ],
+
+    "@profile-route/*":[
+      "./src/routes/profile/*",
+      "./src/routes/profile/components/atoms*.tsx",
+      "./src/routes/profile/components/layout/*.tsx",
+    ],
+    "@payment-route/*":[
+      "./src/routes/payments/*",
+      "./src/routes/payments/components/atoms*.tsx",
+      "./src/routes/payments/components/layout/*.tsx",
+    ],
+    "@friends-route/*":[
+      "./src/routes/friends/*",
+      "./src/routes/friends/components/atoms*.tsx",
+      "./src/routes/friends/components/layout/*.tsx",
+    ],
+    "@navigation/*":["./src/navigation/*.ts","./src/navigation/*.tsx"],
+    "@permissions/*":["./src/routes/permissions/*.tsx"],
+    "@route/*":["./src/routes/*.tsx"],
+    "@global_/*":["./src/global/api/client.ts","./src/global/api/*ts"]
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
+}
